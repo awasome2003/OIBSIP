@@ -1,0 +1,424 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-image: url(assests/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  background-position: center;
+  color: black;
+}
+
+/* Header */
+header {
+  background: rgb(29, 142, 187);
+  border-bottom: 1px solid rgb(76, 99, 154);
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.logo a {
+  width: 150px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  transition: 1;
+  color: aqua;
+  text-decoration: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 26px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show the menu icon on small screens */
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    width: 200px;
+    border-radius: 10px;
+    display: none; /* Hide the menu on small screens */
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav ul {
+    display: flex; /* Show menu when checkbox is checked */
+  }
+}
+
+/* Ensure nav tabs are visible on larger screens */
+@media (min-width: 769px) {
+  nav ul {
+    display: flex !important; /* Force display on larger screens */
+  }
+}
+/* Hide the menu when not checked */
+nav ul {
+  display: none;
+}
+
+/* Show the menu when checked */
+#menu-toggle:checked ~ nav ul {
+  display: flex;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.hero button a {
+  text-decoration: none;
+  color: white;
+}
+
+.hero button:hover {
+  background: #555;
+}
+
+.hero-img {
+  width: 90%;
+  max-width: 100%;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 60px 20px;
+  background: white;
+  width: 100%;
+  height: 100vh;
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  width: 50%;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-image img {
+    width: 90%;
+  }
+}
+
+/* Services Section */
+.services {
+  padding: 60px 20px;
+  background: transparent;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: whitesmoke;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  width: 30%;
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card .img {
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.service-card p {
+  font-size: 1em;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Responsive Design for Services Section */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background: #f4f4f4;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.contact h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  max-width: 40%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-info ul li i {
+  color: #ff6347; /* Example color: tomato */
+  margin-right: 10px;
+}
+
+.contact-form {
+  max-width: 45%;
+  text-align: left;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff6347; /* Example color: tomato */
+}
+
+.contact-form button {
+  padding: 15px;
+  background: #ff6347; /* Example color: tomato */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #e5533c; /* Slightly darker shade */
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}

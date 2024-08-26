@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo"><a href="#home">LOGO</a></div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        &#9776;
+        <!-- This is the menu icon (hamburger icon) -->
+      </label>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="content">
+        <h1>Welcome to Our Landing Page</h1>
+      <p>Your success is our mission. Discover more about what we offer.</p>
+      <button><a href="#services">Get Started</a></button>
+      </div>
+      <div class="img">
+        <img src="assests/hero-img.avif" alt="">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+          Welcome to our company! We are dedicated to providing the best
+          services and solutions to our clients. With a team of experienced
+          professionals, we are committed to driving innovation and delivering
+          high-quality results. Our mission is to help businesses achieve their
+          goals through tailored solutions that meet their unique needs.
+        </p>
+        <p>
+          Our values are rooted in integrity, excellence, and a customer-centric
+          approach. We believe in building long-lasting relationships with our
+          clients by offering exceptional service and support. Join us on our
+          journey to make a positive impact in the industry and beyond.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="assests/about-img.jpg" alt="About Us" />
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <div class="img"><img src="assests/normal.jpg" alt="" /></div>
+          <h3>Web Development</h3>
+          <p>
+            We create responsive and engaging websites tailored to your business
+            needs using the latest web technologies.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="img"><img src="assests/Cloud-img.jpg" alt="" /></div>
+          <h3>Mobile App Development</h3>
+          <p>
+            Our team builds user-friendly mobile applications for both Android
+            and iOS platforms, ensuring seamless performance.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="img"><img src="assests/App-img.jpg" alt="" /></div>
+          <h3>Cloud Solutions</h3>
+          <p>
+            We provide scalable cloud solutions to help you store, manage, and
+            process data efficiently with robust security measures.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>
+            We'd love to hear from you! Whether you have a question about our
+            services, pricing, or anything else, our team is ready to answer all
+            your questions.
+          </p>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 1234 Street Name, City,
+              Country
+            </li>
+            <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+            <li><i class="fas fa-envelope"></i> info@yourcompany.com</li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <form action="#">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
